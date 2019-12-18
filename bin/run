@@ -13,7 +13,7 @@ song.save
 song2 = Song.new(name:"Andrew", album: "Latest")
 song2.save
 
-p DB[:conn].execute("SELECT * FROM #{self.table_name}")
+p DB[:conn].execute("SELECT * FROM songs")
 
 puts Song.find_by_name("Hello")
 
