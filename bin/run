@@ -14,7 +14,7 @@ song.save
 song2 = Song.new(name:"Andrew", album: "Latest")
 song2.save
 binding.pry
-p DB[:conn].execute("SELECT * FROM songs")
+p DB[:conn].execute("SELECT * FROM #{Song.table_name}")
 
 puts Song.find_by_name("Hello")
 
